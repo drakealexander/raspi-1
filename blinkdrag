@@ -4,7 +4,11 @@ import blinky
 
 list = [
 	blinky.drag,
-	blinky.blink
+	blinky.blink,
+	blinky.three,
+	blinky.out,
+	blinky.jump,
+	blinky.spike
 ]
 
 

@@ -25,6 +25,16 @@ outtwo = [6,13]
 outthree = [22,13]
 outfour = [6,26]
 
+#####Space
+spaceone = [6,13]
+spacetwo = [26,22]
+
+######Swipe
+swipeone = [22]
+swipetwo = [6]
+swipethree = [13]
+swipefour = [26]
+
 GPIO.setup(pins, GPIO.OUT, initial=GPIO.HIGH)
 
 
@@ -86,4 +96,47 @@ def spike(sleep=0.05, count=5):
 		time.sleep(sleep)
                 
 
+def space(sleep=0.25, count=1):
+	for n in range(count):
+		GPIO.output(spaceone,1)
+		time.sleep(sleep)
+		GPIO.output(spaceone,0)
+		time.sleep(sleep)
+		GPIO.output(spacetwo,1)
+		time.sleep(sleep)
+		GPIO.output(spacetwo,0)
 
+def swipe(sleep=0.05, count=2):
+    for n in range(count):
+        GPIO.output(swipeone,1)
+        time.sleep(sleep)
+        GPIO.output(swipeone,0)
+        time.sleep(sleep)
+        GPIO.output(swipetwo,1)
+        time.sleep(sleep)
+        GPIO.output(swipetwo,0)
+        time.sleep(sleep)
+        GPIO.output(swipethree,1)
+        time.sleep(sleep)
+        GPIO.output(swipethree,0)
+        time.sleep(sleep)
+        GPIO.output(swipefour,1)
+        time.sleep(sleep)
+        GPIO.output(swipefour,0)
+        time.sleep(sleep)
+        GPIO.output(swipethree,1)
+        time.sleep(sleep)
+        GPIO.output(swipethree,0)
+        time.sleep(sleep)
+        GPIO.output(swipetwo,1)
+        time.sleep(sleep)
+        GPIO.output(swipetwo,0)
+        time.sleep(sleep)
+        GPIO.output(swipeone,1)
+        time.sleep(sleep)
+        GPIO.output(swipeone,0)
+        time.sleep(sleep)
+
+def base(sleep=1.5, count=1):
+    GPIO.output(pins,1)
+    time.sleep(sleep)

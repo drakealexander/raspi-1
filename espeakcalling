@@ -1,0 +1,15 @@
+#!/usr/bin/env python3
+
+import espeak_mine
+import random
+
+
+ 
+list = [
+        espeak_mine.name(),
+        espeak_mine.question()
+]
+     
+         
+while True:
+    random.choice(list)

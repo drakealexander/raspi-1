@@ -6,8 +6,9 @@ import random
 
  
 list = [
-        espeak_mine.name(),
-        espeak_mine.question()
+        #espeak_mine.name(),
+        #espeak_mine.question(),
+        espeak_mine.story()
 ]
      
          
